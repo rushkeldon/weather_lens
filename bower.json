@@ -1,0 +1,44 @@
+{
+    "name" : "weather_lens",
+    "version" : "0.0.0",
+    "homepage" : "https://github.com/rushkeldon/weather_lens",
+    "contributors" : [
+        {
+            "name" : "Keldon Rush",
+            "email" : "keldon@spiral9.com"
+        }
+    ],
+    "description" : "A responsive Angular app to show current conditions, and min and max temperature for the next five days",
+    "main" : "build",
+    "keywords" : [
+        "HTML5",
+        "CSS3",
+        "Angular",
+        "Responsive",
+        "Portfolio",
+        "GSAP"
+    ],
+    "license" : "MIT",
+    "ignore" : [
+        "vendor/*"
+    ],
+    "dependencies" : {
+        "angular" : "1.5.x",
+        "angular-aria" : "1.5.x",
+        "angular-bootstrap" : "0.14.3",
+        "angular-cookies" : "1.5.x",
+        "angular-scroll-animate" : "0.9.x",
+        "angular-timeline" : "1.7.x",
+        "angular-translate" : "2.x.x",
+        "angular-translate-loader-static-files" : "2.x.x",
+        "angular-ui-router" : "0.x.x",
+        "angular-ui-utils" : "0.x.x",
+        "bootstrap" : "3.x.x",
+        "es6-promise" : "3.x.x",
+        "font-awesome" : "4.x.x",
+        "gsap" : "1.x.x",
+        "restangular" : "1.x.x",
+        "signals" : "1.0.0",
+        "underscore" : "1.8.3"
+    }
+}

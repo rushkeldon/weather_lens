@@ -1,0 +1,63 @@
+{
+    "name" : "weather_lens",
+    "version" : "0.0.0",
+    "homepage" : "https://github.com/rushkeldon/weather_lens",
+    "contributors" : [
+        {
+            "name" : "Keldon Rush",
+            "email" : "keldon@spiral9.com"
+        }
+    ],
+    "description" : "A responsive Angular app to show current conditions, and min and max temperature for the next five days",
+    "main" : "build",
+    "keywords" : [
+        "HTML5",
+        "CSS3",
+        "Angular",
+        "Responsive",
+        "Portfolio",
+        "GSAP"
+    ],
+    "private": true,
+    "dependencies": {
+        "angular" : "1.5.x",
+        "todomvc-app-css": "2.x.x",
+        "todomvc-common": "1.x.x"
+    },
+    "devDependencies": {
+        "angular-mocks": "1.x.x",
+        "angular-route": "1.x.x",
+        "browserify": "13.x.x",
+        "browserify-ngannotate": "2.x.x",
+        "del": "2.0.x",
+        "globby" : "3.0.x",
+        "gulp": "3.9.x",
+        "gulp-cachebust": "0.0.x",
+        "gulp-concat": "2.6.x",
+        "gulp-copy": "x.x.x",
+        "gulp-flatten": "0.2.x",
+        "gulp-html2js" : "0.2.x",
+        "gulp-install": "0.6.x",
+        "gulp-jshint": "1.12.x",
+        "gulp-karma": "0.0.x",
+        "gulp-newer": "1.2.x",
+        "gulp-less": "3.0.x",
+        "gulp-rename": "1.2.x",
+        "gulp-sourcemaps": "1.6.x",
+        "gulp-uglify": "1.4.x",
+        "gulp-util": "3.0.x",
+        "gulp-webserver": "0.9.x",
+        "gulp.spritesmith": "4.2.x",
+        "jasmine-core": "2.3.x",
+        "jshint-smart": "1.x.x",
+        "karma": "0.13.x",
+        "karma-chrome-launcher": "2.x.x",
+        "karma-jasmine": "1.x.x",
+        "karma-phantomjs-launcher": "1.x.x",
+        "less-plugin-glob" : "1.x.x",
+        "phantomjs" : "2.x.x",
+        "through2" : "2.0.x",
+        "vinyl-buffer": "1.0.x",
+        "vinyl-source-stream": "1.1.x"
+    }
+}
