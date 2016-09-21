@@ -28,7 +28,7 @@ var paths = {
 };
 
 var fileNames = {
-    cssFile : 'spiral9.css'
+    cssFile : 'weatherlens.css'
 };
 
 var filePatterns = {
@@ -48,8 +48,8 @@ var filePatterns = {
         'vendor/glyphicons/social/css/glyphicons-social.css'
     ],
     vendorJSfiles : [
-        'vendor/angular-scroll-animate/dist/*.js',
-        'vendor/dom-to-image/dist/*.js'
+        'vendor/lodash/dist/lodash.min.js',
+        'vendor/restangular/dist/restangular.min.js'
     ]
 };
 
@@ -109,7 +109,7 @@ gulp.task( 'compileJS', [], function compileJS() {
     var bundledStream = through2();
 
     bundledStream
-        .pipe( source( 'spiral9.js' ) )
+        .pipe( source( 'weatherlens.js' ) )
         .pipe( buffer() )
         .pipe( sourcemaps.init( { loadMaps : true } ) )
         .pipe( uglify() )

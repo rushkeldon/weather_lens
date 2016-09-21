@@ -1,10 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html ng-app="spiral9.app.weatherLens" ng-controller="weatherLensController">
     <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+
+        <title>WeatherLens</title>
+        <!-- JS -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/ScrollToPlugin.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-touch.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-sanitize.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.8/d3.min.js"></script>
+        <!-- vendor scripts (copied rather than concatenated) -->
+        <script type="text/javascript" src="js/lodash.min.js"></script>
+        <script type="text/javascript" src="js/restangular.min.js"></script>
+        <!-- app JS -->
+        <script type="text/javascript" src="js/weatherlens.js"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300" />
+        <!--
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/glyphicons.css">
+        <link rel="stylesheet" type="text/css" href="css/glyphicons-bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/glyphicons-halflings.css">
+        <link rel="stylesheet" type="text/css" href="css/glyphicons-social.css">
+        -->
+        <link rel="stylesheet" type="text/css" href="css/weatherlens.css">
     </head>
+
     <body>
-        
+        <div class="slide-and-title">
+            <slide-panel></slide-panel>
+            <title-panel></title-panel>
+        </div>
+        <nav-bar></nav-bar>
+        <about-panel></about-panel>
+        <skills-panel></skills-panel>
+        <work-experience-panel></work-experience-panel>
+        <portfolio-panel></portfolio-panel>
+        <contact-panel></contact-panel>
+        <footer-bar></footer-bar>
     </body>
 </html>
