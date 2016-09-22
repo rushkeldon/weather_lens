@@ -36,16 +36,16 @@ var filePatterns = {
     directiveTemplates : 'src/directives/**/*.tpl.html',
     lessForDirectives : 'src/directives/**/*.less',
     fontFiles : [
-        'vendor/font-awesome/fonts/*',
+        /*'vendor/font-awesome/fonts/*',
         'vendor/glyphicons/basic_bootstrap/fonts/*',
         'vendor/glyphicons/halfling/fonts/*',
-        'vendor/glyphicons/social/fonts/*'
+        'vendor/glyphicons/social/fonts/*'*/
     ],
     vendorCSSfiles : [
-        'vendor/bootstrap/dist/css/bootstrap.min.css',
+        /*'vendor/bootstrap/dist/css/bootstrap.min.css',
         'vendor/glyphicons/basic_bootstrap/css/*',
         'vendor/glyphicons/halfling/css/glyphicons-halflings.css',
-        'vendor/glyphicons/social/css/glyphicons-social.css'
+        'vendor/glyphicons/social/css/glyphicons-social.css'*/
     ],
     vendorJSfiles : [
         'vendor/lodash/dist/lodash.min.js',
@@ -184,6 +184,6 @@ gulp.task( 'default', [
     'copyFonts',
     'copyVendorCSS',
     'copyMainFiles'
-], function buildSpiral9() {
+], function buildWeatherlens() {
 
 } );

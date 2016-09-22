@@ -18,6 +18,7 @@
         <script type="text/javascript" src="js/lodash.min.js"></script>
         <script type="text/javascript" src="js/restangular.min.js"></script>
         <!-- app JS -->
+        <script type="text/javascript" src="js/templates-components.js"></script>
         <script type="text/javascript" src="js/weatherlens.js"></script>
 
         <!-- CSS -->
@@ -35,16 +36,21 @@
     </head>
 
     <body>
-        <div class="slide-and-title">
-            <slide-panel></slide-panel>
-            <title-panel></title-panel>
-        </div>
-        <nav-bar></nav-bar>
-        <about-panel></about-panel>
-        <skills-panel></skills-panel>
-        <work-experience-panel></work-experience-panel>
-        <portfolio-panel></portfolio-panel>
-        <contact-panel></contact-panel>
-        <footer-bar></footer-bar>
+        <bg-pane></bg-pane>
+        <title-bar>
+            <!--
+            <loc-picker></loc-picker>
+            -->
+        </title-bar>
+        <main>
+            <weather-currently-panel></weather-currently-panel>
+            <weather-hourly-panel></weather-hourly-panel>
+            <weather-daily-panel></weather-daily-panel>
+        </main>
+        <footer-bar>
+            <!--
+            <badge-dark-sky></badge-dark-sky>
+            -->
+        </footer-bar>
     </body>
 </html>

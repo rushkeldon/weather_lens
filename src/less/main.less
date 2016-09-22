@@ -1,0 +1,81 @@
+@import 'variables.less';
+@import 'mixins.less';
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.non-scrollable {
+    overflow : hidden;
+}
+
+body {
+    position: relative;
+    background : transparent;
+    color: @white;
+    font-family: @fontMain;
+    font-weight: 300;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow: scroll;
+    width: 100vw;
+}
+
+.slide-and-title {
+    position: relative;
+    overflow: auto;
+}
+
+a {
+    .MixType();
+    text-decoration: none;
+    color: @white;
+}
+
+p {
+    .MixType();
+    font-size: 14px;
+    font-weight: 400;
+}
+
+h1 {
+    .MixType();
+    font-size: 75px;
+    font-weight: 700;
+}
+
+h2 {
+    .MixType();
+    font-size: 36px;
+    font-weight: 300;
+    .MixTypeUpperCase();
+}
+
+h3 {
+    .MixType();
+    font-size: 24px;
+    font-weight: 400;
+}
+
+h4 {
+    .MixType();
+    font-size: 19px;
+    font-weight: 600;
+}
+
+h5 {
+    .MixType();
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@import '../directives/**/*.less';

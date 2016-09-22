@@ -33,12 +33,20 @@
 angular.module( 'spiral9.app.weatherLens', [
     'ngTouch',
     'restangular',
+    'spiral9.directives.bgPane',
+    'spiral9.directives.titleBar',
+    /*
+    'spiral9.directives.locPicker',
+    'spiral9.directives.weatherCurrentlyPanel',
+    'spiral9.directives.weatherHourlyPanel',
+    'spiral9.directives.weatherDailyPanel',
+    'spiral9.directives.badgeDarkSky',
+    */
+    'spiral9.directives.footerBar',
     'spiral9.filters.makeSafeHTML',
     'spiral9.services.ForecastService',
-    'spiral9.services.GoogleMapService'/*,
-    'spiral9.services.ResponsiveService',
-    'spiral9.services.SignalTowerService',
-    'templates-components'*/
+    'spiral9.services.GoogleMapService',
+    'templates-components'
 ] )
     .config( function weatherLensConfig() {
         var CN = "weatherLensConfig";
