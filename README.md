@@ -5,4 +5,4 @@
 ## Why?
 
 * A coding challenge for an interview
-* To demonstrate Angular, HTML, JS, LESS, Gulp, Bower, Node chops
+* To demonstrate Angular, HTML, JS, LESS, Gulp, Bower, and Node chops
