@@ -1,6 +1,6 @@
 # WeatherLens
 
-#### Displays current weather conditions and 5-day forecast for the selected location
+#### Displays current weather conditions and 5-day forecast for the selected location using the [Dark Sky API](https://darksky.net/poweredby/) and the Google Map Geolocation API
 
 ## Why?
 
