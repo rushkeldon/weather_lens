@@ -164,7 +164,7 @@ gulp.task( 'copyFonts', [], function copyFonts() {
 
 // copy main files
 gulp.task( 'copyMainFiles', [], function copyMainFiles() {
-    return gulp.src( [ 'src/index.html', 'src/index.json' ] )
+    return gulp.src( [ 'src/index.html' ] )
         .pipe( gulp.dest( './build' ) );
 } );
 
