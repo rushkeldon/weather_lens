@@ -154,7 +154,6 @@ angular.module( 'spiral9.services.ForecastService', [
                             forecastService.forecast = _forecastService.normalize( forecastData, lat, lon );
 
                             if( forecastService.forecast.success ){
-                                console.log( '\tforecastService.forecast : ', forecastService.forecast );
                                 deferred.resolve( forecastService.forecast );
                                 SignalTowerService.dispatchSignal( 'signalNewForecastReceived', forecastService.forecast );
                             } else {

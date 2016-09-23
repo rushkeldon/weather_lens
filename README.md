@@ -10,3 +10,10 @@
 
 * A coding challenge for an interview
 * To demonstrate Angular, HTML, JS, LESS, Gulp, Bower, and Node chops
+
+## How To Build?
+
+### Prerequisites : 
+
+* Developed using Node on a Mac v5.6.0 - not tested on other versions 'yet'
+

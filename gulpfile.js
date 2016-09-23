@@ -36,17 +36,12 @@ var filePatterns = {
     directiveTemplates : 'src/directives/**/*.tpl.html',
     lessForDirectives : 'src/directives/**/*.less',
     fontFiles : [
-        /*'vendor/font-awesome/fonts/*',
-        'vendor/glyphicons/basic_bootstrap/fonts/*',
-        'vendor/glyphicons/halfling/fonts/*',
-        'vendor/glyphicons/social/fonts/*'*/
+
     ],
     vendorCSSfiles : [
-        /*'vendor/bootstrap/dist/css/bootstrap.min.css',
-        'vendor/glyphicons/basic_bootstrap/css/*',
-        'vendor/glyphicons/halfling/css/glyphicons-halflings.css',
-        'vendor/glyphicons/social/css/glyphicons-social.css'*/
+
     ],
+    // NOTE : most vendor files are linked to CDNs, but not those below.
     vendorJSfiles : [
         'vendor/lodash/dist/lodash.min.js',
         'vendor/restangular/dist/restangular.min.js'

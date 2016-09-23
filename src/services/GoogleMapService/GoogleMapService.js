@@ -133,15 +133,11 @@ angular.module( 'spiral9.services.GoogleMapService', [
                     } )
                     .then(
                         function locationReceived( locationData ) {
-                            console.log( CN + ".locationReceived" );
-
                             googleMapService.location = _googleMapService.normalize( locationData );
 
                             if( googleMapService.location.status === _googleMapService.statusCodes.OK ){
-                                console.log( '\tgoogleMapService.location : ', googleMapService.location );
                                 deferred.resolve( googleMapService.location );
                             } else {
-
                                 failed( { msg : 'ERROR : received bad data' } );
                             }
                         },

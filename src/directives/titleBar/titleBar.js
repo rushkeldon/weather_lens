@@ -22,7 +22,7 @@ angular.module( 'spiral9.directives.titleBar', [
  * @name titleBar
  * @restrict E
  * @element ANY
- * @description Displays a background image at random (1 of scope.imageCount)
+ * @description The application titlebar - displays current location and a dropdown to change location
  */
     .directive( 'titleBar', function titleBarDirective( GoogleMapService, ForecastService ) {
         var CN = 'titleBarDirective';
@@ -69,12 +69,6 @@ angular.module( 'spiral9.directives.titleBar', [
                                 console.error( error );
                             } );
                 };
-
-                scope.init = function init(){
-
-                };
-
-                scope.$evalAsync( scope.init );
             }
         };
     } );
