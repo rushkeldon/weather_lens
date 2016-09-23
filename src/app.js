@@ -43,11 +43,6 @@ angular.module( 'spiral9.app.weatherLens', [
     'spiral9.directives.titleBar',
     'spiral9.directives.weatherCurrentlyPanel',
     'spiral9.directives.weatherDailyPanel',
-    /*
-    'spiral9.directives.locPicker',
-    'spiral9.directives.weatherHourlyPanel',
-    'spiral9.directives.badgeDarkSky',
-    */
     'spiral9.directives.footerBar',
     // filters
     'spiral9.filters.makeSafeHTML',
@@ -56,16 +51,10 @@ angular.module( 'spiral9.app.weatherLens', [
 ] )
     .config( function weatherLensConfig() {
         var CN = "weatherLensConfig";
-        console.log( CN );
     } )
 
     .controller( 'weatherLensController', function weatherLensController( $scope ) /*, ForecastService, GoogleMapService*/ {
-        var CN = "weatherLensController";
-        console.log( CN );
-        /*
-        $scope.ForecastService = ForecastService;
-        $scope.GoogleMapService = GoogleMapService;
-        */
+
     } )
 
     .run( function(){ } );

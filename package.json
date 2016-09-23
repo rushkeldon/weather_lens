@@ -8,7 +8,7 @@
             "email" : "keldon@spiral9.com"
         }
     ],
-    "description" : "A responsive Angular app to show current conditions, and min and max temperature for the next five days",
+    "description" : "A responsive Angular app to show current conditions, and the five day forecast",
     "main" : "build",
     "keywords" : [
         "HTML5",
