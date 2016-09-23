@@ -35,9 +35,9 @@ angular.module( 'spiral9.app.weatherLens', [
     'restangular',
     'spiral9.directives.bgPane',
     'spiral9.directives.titleBar',
+    'spiral9.directives.weatherCurrentlyPanel',
     /*
     'spiral9.directives.locPicker',
-    'spiral9.directives.weatherCurrentlyPanel',
     'spiral9.directives.weatherHourlyPanel',
     'spiral9.directives.weatherDailyPanel',
     'spiral9.directives.badgeDarkSky',

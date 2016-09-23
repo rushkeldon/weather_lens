@@ -112,6 +112,7 @@ angular.module( 'spiral9.services.ForecastService', [
                 };
 
                 normalized.currently.time = _forecastService.getDateFromSeconds( normalized.currently.time );
+
                 _forecastService.convertTime( normalized.minutely.data );
                 _forecastService.convertTime( normalized.hourly.data );
                 _forecastService.convertTime( normalized.daily.data );

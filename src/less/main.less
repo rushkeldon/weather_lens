@@ -28,11 +28,22 @@ body {
     overflow-x: hidden;
     overflow: scroll;
     width: 100vw;
+    min-width: @screenMinWidth;
 }
 
-.slide-and-title {
-    position: relative;
-    overflow: auto;
+main{
+    position : absolute;
+    top : @heightTitleBar;
+    bottom : @heightFooterBar;
+    left : 0px;
+    right : 0px;
+    overflow: scroll;
+    margin : auto;
+    max-width : 1000px;
+    width : 100%;
+    @media  @smallQuery, @mediumQuery{
+        top : @heightTitleBarSmall;
+    }
 }
 
 a {

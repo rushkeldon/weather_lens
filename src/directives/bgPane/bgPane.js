@@ -33,7 +33,7 @@ angular.module( 'spiral9.directives.bgPane', [
             scope : {},
             link : function bgPaneDirectiveLink( scope, element, attrs ) {
                 scope.init = function init(){
-                    var bgImgURL = '../img/bg-00' + Math.floor( Math.random() * imageCount ) + '.jpg';
+                    var bgImgURL = 'img/bg-00' + Math.floor( Math.random() * imageCount ) + '.jpg';
                     element.css( {
                         'background-image': 'url(' + bgImgURL +')'
                     } );

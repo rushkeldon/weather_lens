@@ -3,15 +3,11 @@
 @mediumQuery: ~"screen and (min-width:768px) and (max-width:1099px)";
 @smallQuery: ~"screen and (max-width:767px)";
 
-@screenMaxWidthMedium : 1099px;
-@screenMaxWidthSmall : 767px;
-
-
 // fonts
 @fontMain : 'Open Sans', sans-serif;
 
-
 /* colors */
+@barBackground : rgba( 0, 0, 0, 0.3 );
 
 // ms colors :
 @msWinRed : #F54F0D;
@@ -94,12 +90,23 @@
     @clrTxt4_1 : @offBlack;
 
 /* numbers */
+
+    // height
+    @heightTitleBar : 75px;
+    @heightTitleBarSmall : 60px;
+    @heightFooterBar : 50px;
+
+    // width
+    @screenMaxWidthMedium : 1099px;
+    @screenMaxWidthSmall : 767px;
+    @screenMinWidth : 320px;
+    @widthLiveArea : 1150px;
+    @widthLiveAreaMobile : 100%;
+
+    // padding
     @paddingTopPanel : 60px;
     @paddingBottomPanel : 60px;
     @paddingBottomTitleArea : 50px;
-    @widthLiveArea : 1150px;
-    @widthLiveAreaMobile : 100%;
-    @heightBar : 62px;
     @paddingTopPanelSmall : 30px;
     @paddingBottomTitleAreaSmall : 30px;
 

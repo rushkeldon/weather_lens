@@ -1,0 +1,66 @@
+<section class="weather-panel-currently">
+    <table class="weather-table">
+        <tr>
+            <td class="weather-temp-and-summary" colspan="2">
+                <h1>{{ ForecastService.forecast.currently.temperature | number : 0 }}&deg;</h1>
+                <h1>{{ ForecastService.forecast.currently.summary }}</h1>
+            </td>
+            <td class="summary-icon">
+                <img ng-src="img/{{ForecastService.forecast.currently.icon}}.png">
+            </td>
+        </tr>
+        <tr>
+            <td class="info-high-low" colspan="3">
+                <h3>{{ForecastService.forecast.daily.data[ 0 ].temperatureMax | number : 0 }}&deg; / {{ForecastService.forecast.daily.data[ 0 ].temperatureMin | number : 0 }}&deg;</h3>
+            </td>
+        </tr>
+        <!-- wind -->
+        <tr ng-if="ForecastService.forecast.currently.windSpeed > 0">
+            <td class="info-icon">
+                <img src="img/icon_wind.png">
+            </td>
+            <td class="info-label">
+                <h3>wind</h3>
+            </td>
+            <td class="info-data">
+                <h3>{{getCardinalDirection( ForecastService.forecast.currently.windBearing )}}&nbsp;&nbsp;&nbsp;{{ForecastService.forecast.currently.windSpeed | number : 0 }}&nbsp;&nbsp;&nbsp;MPH</h3>
+            </td>
+        </tr>
+        <!-- humidity -->
+        <tr>
+            <td class="info-icon">
+                <img src="img/icon_humidity.png">
+            </td>
+            <td class="info-label">
+                <h3>humidity</h3>
+            </td>
+            <td class="info-data">
+                <h3>{{}}&nbsp;&nbsp;&nbsp;{{ForecastService.forecast.currently.humidity * 100 | number : 0 }}&#37;</h3>
+            </td>
+        </tr>
+        <!-- dew point -->
+        <tr>
+            <td class="info-icon">
+                <img src="img/icon_dew_point.png">
+            </td>
+            <td class="info-label">
+                <h3>dew point</h3>
+            </td>
+            <td class="info-data">
+                <h3>{{ForecastService.forecast.currently.dewPoint | number : 0 }}&deg;</h3>
+            </td>
+        </tr>
+        <!-- pressure -->
+        <tr>
+            <td class="info-icon">
+                <img src="img/icon_pressure.png">
+            </td>
+            <td class="info-label">
+                <h3>pressure</h3>
+            </td>
+            <td class="info-data">
+                <h3>{{ForecastService.forecast.currently.pressure * 0.0295301 | number : 0 }}&nbsp;&nbsp;&nbsp;IN</h3>
+            </td>
+        </tr>
+    </table>
+</section>

@@ -1,0 +1,58 @@
+.weather-panel-currently{
+    display : block;
+    padding : 20px 120px;
+    .weather-table{
+        border : 1px solid white;
+        width : 100%;
+        td{
+            border : 1px solid white;
+            &[class^='info-']{
+                padding-bottom : 20px;
+            }
+        }
+        h1{
+            text-transform : uppercase;
+            text-shadow: 1px 1px 2px black;
+            font-weight: 600;
+            line-height: 75px;
+            white-space: pre-wrap;
+            @media @mediumQuery{
+                font-size : 60px;
+                line-height : 75px;
+            }
+            @media @smallQuery{
+                font-size : 40px;
+                line-height : 55px;
+            }
+        }
+        h3{
+            text-transform : uppercase;
+            text-shadow: 1px 1px 2px black;
+        }
+        .summary-icon {
+            text-align : right;
+            img {
+                width : 200px;
+                @media @smallQuery{
+                    width : 200px * 0.75;
+                }
+            }
+        }
+        .temp-high-low{
+
+        }
+        .info-icon {
+            width : 70px;
+            img{
+                width : 50px;
+            }
+        }
+        .info-label {
+
+        }
+        .info-data {
+            text-align : right;
+            padding-right : 30px;
+        }
+    }
+}

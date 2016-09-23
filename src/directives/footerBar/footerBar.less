@@ -6,6 +6,8 @@
     right : 0px;
     height : 50px;
     line-height : 50px;
+    min-width: @screenMinWidth;
+    background : @barBackground;
     a{
         display : inline-block;
         position : absolute;
@@ -13,10 +15,18 @@
         height : 50px;
         line-height : 50px;
         padding : 0px 0px 0px 20px;
+        @media @smallQuery{
+            padding : 0px 0px 0px 3px;
+            font-size : 14px;
+        }
         &.badge-link{
             right : 0px;
             text-align: right;
             padding : 0px 20px 0px 0px;
+            @media @smallQuery{
+                padding : 0px 3px 0px 0px;
+                font-size : 14px;
+            }
         }
     }
 }
