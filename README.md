@@ -18,8 +18,8 @@
 * Node v 5.6.0
 * Bower v 1.7.9
 
-### From the command line
+### From the command line from project dir :
 
 1. ``` $ npm install ```
-
-
+2. ``` $ bower install ```
+3. ``` $ gulp ```
