@@ -31,3 +31,5 @@
 2. dynamic image service - it would be cool to load related background images by city and condition
 3. test-and-tweak for longer named cities
 4. test failure cases for city / state ( though 'monkey' and 'house' actually resolved to somewhere in the UK! )
+5. I used the dreaded TABLE element for grid layout - it would be good to use flexbox instead, but this implementation works down to an iPhone 4's screen size, so I went with it.
+6. On chrome on iOS the title bar of the browser doesn't disappear with scrolling as the scrolling is happening in the MAIN element as opposed to the body - it would be good to fix that (particularly in landscape!)
