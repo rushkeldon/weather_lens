@@ -1,4 +1,17 @@
 <header class="title-bar">
     <h1>{{GoogleMapService.location.formatted_address}}</h1>
-    <div class="loc-picker"/>
+    <div class="loc-picker">
+        <img src="img/icon_arrow_down.png" ng-click="controlBtnClicked()">
+        <div class="loc-controls" ng-show="areControlsDisplayed">
+            <div class="control-group">
+                <label for="city">city :</label>
+                <input id="city" type="text" placeholder="{{GoogleMapService.location.city}}">
+            </div>
+            <div class="control-group">
+                <label for="state">state :</label>
+                <input id="state" type="text" placeholder="{{GoogleMapService.location.state}}">
+            </div>
+            <button ng-click="commitBtnClicked()">get weather</button>
+        </div>
+    </div>
 </header>

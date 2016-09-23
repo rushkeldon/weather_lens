@@ -13,7 +13,8 @@
 angular.module( 'spiral9.directives.titleBar', [
     'ngTouch',
     'spiral9.filters.makeSafeHTML',
-    'spiral9.services.GoogleMapService'
+    'spiral9.services.GoogleMapService',
+    'spiral9.services.ForecastService'
 ] )
 
 /**
@@ -23,7 +24,7 @@ angular.module( 'spiral9.directives.titleBar', [
  * @element ANY
  * @description Displays a background image at random (1 of scope.imageCount)
  */
-    .directive( 'titleBar', function titleBarDirective( GoogleMapService ) {
+    .directive( 'titleBar', function titleBarDirective( GoogleMapService, ForecastService ) {
         var CN = 'titleBarDirective';
 
         return {
@@ -33,6 +34,38 @@ angular.module( 'spiral9.directives.titleBar', [
             scope : {},
             link : function titleBarDirectiveLink( scope, element, attrs ) {
                 scope.GoogleMapService = GoogleMapService;
+
+                scope.areControlsDisplayed = false;
+
+                scope.toggleControlsDisplay = function toggleControlsDisplay(){
+                    scope.areControlsDisplayed = !scope.areControlsDisplayed;
+                };
+
+                scope.controlBtnClicked = function controlBtnClicked(){
+                    scope.toggleControlsDisplay();
+                };
+
+                scope.commitBtnClicked = function commitBtnClicked(){
+                    scope.toggleControlsDisplay();
+                    var city = element[0].querySelector( '#city' ).value;
+                    var state = element[0].querySelector( '#state' ).value;
+
+                    if( !city ||
+                        !state ||
+                        ( city.toLowerCase() === GoogleMapService.location.city.toLowerCase() && state.toLowerCase() === GoogleMapService.location.state.toLowerCase() ) ){
+                        console.error( "Bad or duplicate/existing city/state." );
+                        return;
+                    }
+
+                    GoogleMapService.getLocation( city, state )
+                        .then(
+                            function newLocationReceived( loc ){
+                                ForecastService.getForecast( loc.lat, loc.lon );
+                            },
+                            function newLocationFailed( error ){
+                                console.error( error );
+                            } );
+                };
 
                 scope.init = function init(){
 

@@ -88,6 +88,8 @@ angular.module( 'spiral9.services.GoogleMapService', [
                 if( !locationData || !locationData.results || locationData.results.length <= 0 ){
                     return {
                         formatted_address : '',
+                        city : '',
+                        state : '',
                         lat : 0,
                         lon : 0,
                         status : _googleMapService.statusCodes.UNKNOWN_ERROR
@@ -96,6 +98,8 @@ angular.module( 'spiral9.services.GoogleMapService', [
 
                 return {
                     formatted_address : locationData.results[ 0 ].formatted_address,
+                    city : locationData.results[ 0 ].address_components[ 0 ].long_name,
+                    state : locationData.results[ 0 ].address_components[ 2 ].short_name,
                     lat : locationData.results[ 0 ].geometry.location.lat,
                     lon : locationData.results[ 0 ].geometry.location.lng,
                     status : locationData.status

@@ -3,10 +3,11 @@
     top: 0px;
     left: 0px;
     right: 0px;
-    text-align: center;
+    text-align: left;
+    padding-left : 5px;
     height : 75px;
     background : transparent;
-    z-index : 0;
+    z-index : 3;
     min-width: @screenMinWidth;
     white-space: nowrap;
     background : @barBackground;
@@ -30,6 +31,82 @@
             content: 'Weather for ';
             @media @smallQuery{
                 content: '';
+            }
+        }
+    }
+    .loc-picker{
+        position : absolute;
+        right : 0px;
+        top : 0px;
+        display : inline-block;
+        img{
+            @media  @smallQuery, @mediumQuery{
+                height : 60px;
+            }
+        }
+        .loc-controls{
+            position : absolute;
+            width : 320px;
+            height : 200px;
+            background : @barBackground;
+            top : @heightTitleBar;
+            right : 0px;
+            padding-top : 5px;
+            @media  @smallQuery, @mediumQuery{
+                top : @heightTitleBarSmall;
+            }
+            .control-group{
+                 padding-bottom : 20px;
+                label{
+                    position : relative;
+                    display : inline-block;
+                    width : 95px;
+                    text-align : right;
+                    font-size : 20px;
+                    font-weight : 600;
+                    text-transform: uppercase;
+                    height : 50px;
+                    line-height : 50px;
+                    padding : 0px 10px;
+                }
+                input{
+                    position : relative;
+                    display : inline-block;
+                    font-size : 16px;
+                    height : 50px;
+                    line-height : 20px;
+                    width : 205px;
+                    text-transform: uppercase;
+                }
+            }
+
+            button{
+                position : absolute;
+                display : block;
+                bottom : 10px;
+                right : 10px;
+                border-radius: 10px;
+                line-height : 40px;
+                padding : 0px 15px;
+                /*
+                height : 50px;
+                font-weight : 600;
+                */
+
+                font-size : 20px;
+                text-transform: uppercase;
+
+                transition: 0.3s;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 600;
+                background-color: @clrBGbtn0;
+                color : @offWhite;
+                outline: none;
+                &.active, &:hover, &:focus {
+                    background: @clrBGbtn0hover;
+                    text-decoration: none;
+                    outline: none;
+                }
             }
         }
     }
