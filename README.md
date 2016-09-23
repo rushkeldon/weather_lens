@@ -13,7 +13,9 @@
 
 ## How To Build?
 
-### Prerequisites (or what is known to work): 
+### Prerequisites (and what versions are known to work): 
 
-* Node v5.6.0
+* Node v 5.6.0
+* Bower v 1.7.9
+
 
