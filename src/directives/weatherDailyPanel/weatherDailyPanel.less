@@ -1,0 +1,84 @@
+.weather-panel-daily{
+    display : block;
+    padding : 20px 120px;
+    @media @mediumQuery{
+        padding : 20px 60px;
+    }
+    @media @smallQuery{
+        padding : 20px 5px;
+    }
+    .weather-table{
+        // DEBUG border
+        // border : 1px solid white;
+        width : 100%;
+        td{
+            // DEBUG border
+            // border : 1px solid white;
+            &[class^='info-']{
+                padding-bottom : 20px;
+                text-align : center;
+                text-shadow: 1px 1px 2px black;
+            }
+            &.info-day{
+                font-size: 24px;
+                font-weight: 400;
+                padding-bottom : 0px;
+            }
+            &.info-icon {
+                padding-bottom : 0px;
+                img{
+                    width : 100px;
+                    @media @smallQuery{
+                        width : 50px;
+                    }
+                }
+            }
+        }
+        h1{
+            text-transform : uppercase;
+            text-shadow: 1px 1px 2px black;
+            font-weight: 600;
+            font-size : 60px;
+            line-height: 75px;
+            white-space: pre-wrap;
+            @media @mediumQuery{
+                font-size : 55px;
+                line-height : 70px;
+            }
+            @media @smallQuery{
+                font-size : 40px;
+                line-height : 55px;
+            }
+        }
+
+        h3{
+            text-transform : uppercase;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        .info-summary > h3{
+            text-align : left;
+            padding-left : 7px;
+            @media @smallQuery{
+                font-size : 20px;
+            }
+        }
+
+        .info-temp{
+            font-size: 22px;
+            font-weight: 600;
+            &.high{
+                padding-bottom : 0px;
+            }
+            &.low{
+                font-size: 20px;
+                font-weight: 400;
+                color: #CCCCCC;
+            }
+        }
+
+        .info-humidity {
+            font-size: 20px;
+        }
+    }
+}

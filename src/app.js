@@ -31,21 +31,27 @@
  */
 
 angular.module( 'spiral9.app.weatherLens', [
+    // built-ins
     'ngTouch',
     'restangular',
+    // services
+    'spiral9.services.ForecastService',
+    'spiral9.services.GoogleMapService',
+    'spiral9.services.SignalTowerService',
+    // directives
     'spiral9.directives.bgPane',
     'spiral9.directives.titleBar',
     'spiral9.directives.weatherCurrentlyPanel',
+    'spiral9.directives.weatherDailyPanel',
     /*
     'spiral9.directives.locPicker',
     'spiral9.directives.weatherHourlyPanel',
-    'spiral9.directives.weatherDailyPanel',
     'spiral9.directives.badgeDarkSky',
     */
     'spiral9.directives.footerBar',
+    // filters
     'spiral9.filters.makeSafeHTML',
-    'spiral9.services.ForecastService',
-    'spiral9.services.GoogleMapService',
+    // components
     'templates-components'
 ] )
     .config( function weatherLensConfig() {
@@ -53,11 +59,13 @@ angular.module( 'spiral9.app.weatherLens', [
         console.log( CN );
     } )
 
-    .controller( 'weatherLensController', function weatherLensController( $scope, ForecastService, GoogleMapService ) {
+    .controller( 'weatherLensController', function weatherLensController( $scope ) /*, ForecastService, GoogleMapService*/ {
         var CN = "weatherLensController";
         console.log( CN );
+        /*
         $scope.ForecastService = ForecastService;
         $scope.GoogleMapService = GoogleMapService;
+        */
     } )
 
     .run( function(){ } );

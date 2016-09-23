@@ -1,0 +1,44 @@
+<section class="weather-panel-daily" ng-show="ForecastService.forecast.success">
+    <table class="weather-table">
+        <tr>
+            <td colspan="5">
+                <h1>5 day forecast</h1>
+            </td>
+        </tr>
+        <tr>
+            <td class="info-summary" colspan="5">
+                <h3>{{ForecastService.forecast.daily.summary}}</h3>
+            </td>
+        </tr>
+        <!-- weekday -->
+        <tr>
+            <td ng-repeat="dayInfo in fiveDays" class="info-day">
+                {{$parent.getWeekDay( ForecastService.forecast.daily.data[ $index ] )}}
+            </td>
+        </tr>
+        <!-- info icon -->
+        <tr>
+            <td ng-repeat="dayInfo in fiveDays" class="info-icon">
+                <img ng-src="img/{{ForecastService.forecast.daily.data[ $index ].icon}}.png">
+            </td>
+        </tr>
+        <!-- high -->
+        <tr>
+            <td ng-repeat="dayInfo in fiveDays" class="info-temp high">
+                {{ForecastService.forecast.daily.data[ $index ].temperatureMax | number : 0 }}&deg;
+            </td>
+        </tr>
+        <!-- low -->
+        <tr>
+            <td ng-repeat="dayInfo in fiveDays" class="info-temp low">
+                {{ForecastService.forecast.daily.data[ $index ].temperatureMin | number : 0 }}&deg;
+            </td>
+        </tr>
+        <!-- humidity -->
+        <tr>
+            <td ng-repeat="dayInfo in fiveDays" class="info-humidity">
+                <img src="img/icon_humidity_small.png">{{ForecastService.forecast.daily.data[ $index ].humidity * 100 | number : 0 }}&#37;
+            </td>
+        </tr>
+    </table>
+</section>

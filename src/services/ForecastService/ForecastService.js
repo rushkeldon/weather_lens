@@ -1,7 +1,8 @@
 angular.module( 'spiral9.services.ForecastService', [
-        'restangular'
+        'restangular',
+        'spiral9.services.SignalTowerService'
     ] )
-    .service( 'ForecastService', function ForecastService( $q, Restangular ) {
+    .service( 'ForecastService', function ForecastService( $q, Restangular, SignalTowerService ) {
         var CN = 'ForecastService';
 
         // private service
@@ -17,7 +18,7 @@ angular.module( 'spiral9.services.ForecastService', [
                 lon : '-122.3320708'
             },
             defaultForecast : {
-                "success": true,
+                "success": false,
                 "lat": "0",
                 "lon": "0",
                 "currently": {
@@ -62,11 +63,13 @@ angular.module( 'spiral9.services.ForecastService', [
                 _forecastService.API = Restangular.one( 'forecast/' + _forecastService.apiKey );
             },
             getDateFromSeconds : function getDateFromSeconds( utcSeconds ) {
-                if( !utcSeconds ){ return new Date(); }
-                return new Date( 0 ).setUTCSeconds( utcSeconds );
+                var newDate = new Date();
+                if( !utcSeconds ){ return newDate; }
+                newDate.setUTCSeconds( utcSeconds );
+                return newDate;
             },
             convertTime : function convertTime( dataArray ){
-                if( !dataArray || !!dataArray.length ){ return; }
+                if( !dataArray ){ return; }
                 var i;
                 for( i=0; i<dataArray.length; i++ ){
                     if( dataArray[ i ].time ){
@@ -111,10 +114,13 @@ angular.module( 'spiral9.services.ForecastService', [
                     daily : forecastData.daily
                 };
 
+
                 normalized.currently.time = _forecastService.getDateFromSeconds( normalized.currently.time );
 
                 _forecastService.convertTime( normalized.minutely.data );
+
                 _forecastService.convertTime( normalized.hourly.data );
+
                 _forecastService.convertTime( normalized.daily.data );
 
                 return normalized;
@@ -150,6 +156,7 @@ angular.module( 'spiral9.services.ForecastService', [
                             if( forecastService.forecast.success ){
                                 console.log( '\tforecastService.forecast : ', forecastService.forecast );
                                 deferred.resolve( forecastService.forecast );
+                                SignalTowerService.dispatchSignal( 'signalNewForecastReceived', forecastService.forecast );
                             } else {
 
                                 failed( { msg : 'ERROR : received bad data' } );
@@ -172,6 +179,7 @@ angular.module( 'spiral9.services.ForecastService', [
 
         // init
         forecastService.reset();
+        SignalTowerService.createSignal( 'signalNewForecastReceived' );
         forecastService.getForecast( _forecastService.defaultLocation.lat, _forecastService.defaultLocation.lon );
 
         // export public service

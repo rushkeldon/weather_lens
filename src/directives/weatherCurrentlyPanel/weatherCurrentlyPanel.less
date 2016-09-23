@@ -1,11 +1,19 @@
 .weather-panel-currently{
     display : block;
     padding : 20px 120px;
+    @media @mediumQuery{
+        padding : 20px 60px;
+    }
+    @media @smallQuery{
+        padding : 20px 5px;
+    }
     .weather-table{
-        border : 1px solid white;
+        // DEBUG border
+        // border : 1px solid white;
         width : 100%;
         td{
-            border : 1px solid white;
+            // DEBUG border
+            // border : 1px solid white;
             &[class^='info-']{
                 padding-bottom : 20px;
             }
@@ -52,7 +60,7 @@
         }
         .info-data {
             text-align : right;
-            padding-right : 30px;
+            padding-right : 40px;
         }
     }
 }

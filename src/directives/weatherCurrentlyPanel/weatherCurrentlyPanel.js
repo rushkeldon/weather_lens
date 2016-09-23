@@ -36,8 +36,7 @@ angular.module( 'spiral9.directives.weatherCurrentlyPanel', [
 
                 // reference : http://climate.umn.edu/snow_fence/components/winddirectionanddegreeswithouttable3.htm
                 scope.getCardinalDirection = function getCardinalDirection( degrees ){
-                    console.log( CN + ".getCardinalDirection" );
-                    console.log( '\tdegrees : ', degrees );
+                    // console.log( CN + ".getCardinalDirection" );
                     var dir = "";
                     switch( true ){
                         case ( degrees === null || degrees === undefined ) :
