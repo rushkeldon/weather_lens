@@ -46,35 +46,13 @@ angular.module( 'spiral9.directives.weatherDailyPanel', [
                 ];
 
                 scope.fiveDays = [ 0, 1, 2, 3, 4 ];
-
                 scope.ForecastService = ForecastService;
-
-                scope.newForecastReceived = function newForecastReceived( newForecast ) {
-                    console.log( CN + ".newForecastReceived" );
-                    console.log( '\tnewForecast : ', newForecast );
-
-                    $timeout( function(){
-                        // noop
-                    } );
-                };
 
                 scope.getWeekDay = function getWeekDay( dayInfo ){
                     if( !dayInfo ){ return ''; }
                     return weekdays[ dayInfo.time.getDay() ];
                 };
 
-                scope.init = function init(){
-                    // subscribe to new forecasts
-                    SignalTowerService.subscribeToSignal( 'signalNewForecastReceived',scope.newForecastReceived, scope );
-                    // if we have a forecast now then display it
-                    if( ForecastService.forecast.success ){
-                        scope.newForecastReceived( ForecastService.forecast );
-                    } else {
-                        console.log( CN + ' has no forecast yet...' );
-                    }
-                };
-
-                scope.$evalAsync( scope.init );
             }
         };
     } );

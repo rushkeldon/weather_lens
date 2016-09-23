@@ -50,10 +50,13 @@ angular.module( 'spiral9.directives.titleBar', [
                     var city = element[0].querySelector( '#city' ).value;
                     var state = element[0].querySelector( '#state' ).value;
 
+                    element[0].querySelector( '#city' ).value = '';
+                    element[0].querySelector( '#state' ).value = '';
+
                     if( !city ||
                         !state ||
                         ( city.toLowerCase() === GoogleMapService.location.city.toLowerCase() && state.toLowerCase() === GoogleMapService.location.state.toLowerCase() ) ){
-                        console.error( "Bad or duplicate/existing city/state." );
+                        console.error( "Bad or duplicate/existing city-and-state." );
                         return;
                     }
 
