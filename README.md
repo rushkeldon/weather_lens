@@ -13,7 +13,7 @@
 
 ## How To Build?
 
-### Prerequisites : 
+### Prerequisites (or what is known to work): 
 
-* Developed using Node on a Mac v5.6.0 - not tested on other versions 'yet'
+* Node v5.6.0
 
