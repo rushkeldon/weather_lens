@@ -23,3 +23,11 @@
 1. ``` $ npm install ```
 2. ``` $ bower install ```
 3. ``` $ gulp ```
+4. open the newly created 'build' directory and open index.html in your favorite browser
+
+## What are the project's known TODOs?
+
+1. unit tests - I haven't written any yet!!
+2. dynamic image service - it would be cool to load related background images by city and condition
+3. test-and-tweak for longer named cities
+4. test failure cases for city / state ( though 'monkey' and 'house' actually resolved to somewhere in the UK! )
