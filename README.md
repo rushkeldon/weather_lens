@@ -18,4 +18,8 @@
 * Node v 5.6.0
 * Bower v 1.7.9
 
+### From the command line
+
+1. ``` $ npm install ```
+
 
