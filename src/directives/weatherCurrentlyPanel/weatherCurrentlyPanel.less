@@ -1,3 +1,5 @@
+@calcLabelAndData : ~"calc(50% - 35px)";
+
 .weather-panel-currently{
     display : block;
     padding : 20px 120px;
@@ -11,11 +13,54 @@
         // DEBUG border
         // border : 1px solid white;
         width : 100%;
-        td{
+        display: flex;
+        flex-direction: column;
+        flex-flow: row wrap;
+        .td{
             // DEBUG border
             // border : 1px solid white;
-            &[class^='info-']{
-                padding-bottom : 20px;
+            flex-grow : 1;
+            padding-bottom : 20px;
+            &.weather-temp-and-summary{
+                width : 50%;
+                padding-bottom : 0px;
+                height : 225px;
+                @media @smallQuery{
+                    height : 175px;
+                }
+            }
+            &.summary-icon{
+                width : 50%;
+                text-align : right;
+                padding-bottom : 0px;
+                height : 225px;
+                @media @smallQuery{
+                    height : 175px;
+                }
+                img{
+                    max-width : 100%;
+                    @media @smallQuery{
+                        margin-right: -10px;
+                    }
+                }
+            }
+            &.temp-high-low{
+                width : 100%;
+            }
+            // rows of info
+            &.info-icon{
+                width : 70px;
+                img{
+                    width : 50px;
+                }
+            }
+            &.info-label{
+                white-space: nowrap;
+                width : @calcLabelAndData;
+            }
+            &.info-data{
+                width : @calcLabelAndData;
+                text-align: right;
             }
         }
         h1{
@@ -36,31 +81,7 @@
         h3{
             text-transform : uppercase;
             text-shadow: 1px 1px 2px black;
-        }
-        .summary-icon {
-            text-align : right;
-            img {
-                width : 200px;
-                @media @smallQuery{
-                    width : 200px * 0.75;
-                }
-            }
-        }
-        .temp-high-low{
-
-        }
-        .info-icon {
-            width : 70px;
-            img{
-                width : 50px;
-            }
-        }
-        .info-label {
-
-        }
-        .info-data {
-            text-align : right;
-            padding-right : 40px;
+            line-height : 50px;
         }
     }
 }
