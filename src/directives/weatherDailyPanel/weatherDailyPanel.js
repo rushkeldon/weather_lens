@@ -12,7 +12,6 @@
  */
 angular.module( 'spiral9.directives.weatherDailyPanel', [
     'ngTouch',
-    'spiral9.filters.makeSafeHTML',
     'spiral9.services.ForecastService',
     'spiral9.services.GoogleMapService',
     'spiral9.services.SignalTowerService'

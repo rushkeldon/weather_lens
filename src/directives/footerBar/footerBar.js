@@ -11,8 +11,7 @@
  * @description An empty module description. Please fill in a high level description of this module.
  */
 angular.module( 'spiral9.directives.footerBar', [
-    'ngTouch',
-    'spiral9.filters.makeSafeHTML'
+    'ngTouch'
 ] )
 
 /**

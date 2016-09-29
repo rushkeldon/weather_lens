@@ -22,7 +22,7 @@
             <h3>wind</h3>
         </div>
         <div class="td info-data">
-            <h3>{{getCardinalDirection( ForecastService.forecast.currently.windBearing )}}&nbsp;&nbsp;&nbsp;{{ForecastService.forecast.currently.windSpeed | number : 0 }}&nbsp;&nbsp;&nbsp;MPH</h3>
+            <h3>{{getCardinalDirection( ForecastService.forecast.currently.windBearing )}}&ensp;{{ForecastService.forecast.currently.windSpeed | number : 0 }}&ensp;MPH</h3>
         </div>
 
         <!-- humidity -->
@@ -33,8 +33,8 @@
         <div class="td info-label">
             <h3>humidity</h3>
         </div>
-        <div class="td info-data">
-            <h3>{{}}&nbsp;&nbsp;&nbsp;{{ForecastService.forecast.currently.humidity * 100 | number : 0 }}&#37;</h3>
+        <div class="td info-data humidity">
+            <h3>{{ForecastService.forecast.currently.humidity * 100 | number : 0 }}&#37;</h3>
         </div>
 
         <!-- dew point -->
@@ -58,7 +58,7 @@
             <h3>pressure</h3>
         </div>
         <div class="td info-data">
-            <h3>{{ForecastService.forecast.currently.pressure * 0.0295301 | number : 0 }}&nbsp;&nbsp;&nbsp;IN</h3>
+            <h3>{{ForecastService.forecast.currently.pressure * 0.0295301 | number : 0 }}&ensp;IN</h3>
         </div>
 
     </div>

@@ -1,27 +1,31 @@
 .weather-panel-daily{
     display : block;
-    padding : 20px 120px;
+    padding : 0px 120px;
     @media @mediumQuery{
-        padding : 20px 60px;
+        padding : 0px 60px;
     }
     @media @smallQuery{
-        padding : 20px 5px;
+        padding : 0px 5px;
     }
     .weather-table{
         // DEBUG border
         // border : 1px solid white;
         width : 100%;
-        td{
+        display : flex;
+        flex-direction : column;
+        flex-flow : row wrap;
+        .td{
             // DEBUG border
             // border : 1px solid white;
-            &[class^='info-']{
-                padding-bottom : 20px;
-                text-align : center;
-                text-shadow: 1px 1px 2px black;
-            }
+            flex-grow : 1;
+            padding-bottom : 20px;
+            text-align : center;
+            text-shadow : 1px 1px 2px black;
+            white-space : nowrap;
+            width : 20%;
             &.info-day{
-                font-size: 24px;
-                font-weight: 400;
+                font-size : 24px;
+                font-weight : 400;
                 padding-bottom : 0px;
             }
             &.info-icon {
@@ -33,17 +37,36 @@
                     }
                 }
             }
+            &.info-temp{
+                font-size : 22px;
+                font-weight : 600;
+                padding-left : 12px;
+                &.high{
+                    padding-bottom : 0px;
+                }
+                &.low{
+                    font-size : 20px;
+                    font-weight : 400;
+                    color : #CCCCCC;
+                }
+            }
+            &.info-humidity {
+                font-size : 22px;
+                font-weight : 600;
+                font-size : 20px;
+            }
         }
         h1{
             text-transform : uppercase;
-            text-shadow: 1px 1px 2px black;
-            font-weight: 600;
+            text-shadow : 1px 1px 2px black;
+            font-weight : 600;
             font-size : 60px;
-            line-height: 75px;
-            white-space: pre-wrap;
+            line-height : 65px;
+            white-space : nowrap;
+            padding-bottom : 10px;
             @media @mediumQuery{
                 font-size : 55px;
-                line-height : 70px;
+                line-height : 60px;
             }
             @media @smallQuery{
                 font-size : 40px;
@@ -53,32 +76,15 @@
 
         h3{
             text-transform : uppercase;
-            text-shadow: 1px 1px 2px black;
-        }
-
-        .info-summary > h3{
-            text-align : left;
-            padding-left : 7px;
-            @media @smallQuery{
-                font-size : 20px;
+            text-shadow : 1px 1px 2px black;
+            &.info-summary{
+                text-align : left;
+                padding-left : 7px;
+                padding-bottom : 20px;
+                @media @smallQuery{
+                    font-size : 20px;
+                }
             }
-        }
-
-        .info-temp{
-            font-size: 22px;
-            font-weight: 600;
-            &.high{
-                padding-bottom : 0px;
-            }
-            &.low{
-                font-size: 20px;
-                font-weight: 400;
-                color: #CCCCCC;
-            }
-        }
-
-        .info-humidity {
-            font-size: 20px;
         }
     }
 }

@@ -12,7 +12,6 @@
  */
 angular.module( 'spiral9.directives.titleBar', [
     'ngTouch',
-    'spiral9.filters.makeSafeHTML',
     'spiral9.services.GoogleMapService',
     'spiral9.services.ForecastService'
 ] )

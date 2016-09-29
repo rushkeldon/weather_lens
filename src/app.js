@@ -45,7 +45,7 @@ angular.module( 'spiral9.app.weatherLens', [
     'spiral9.directives.weatherDailyPanel',
     'spiral9.directives.footerBar',
     // filters
-    'spiral9.filters.makeSafeHTML',
+
     // components
     'templates-components'
 ] )

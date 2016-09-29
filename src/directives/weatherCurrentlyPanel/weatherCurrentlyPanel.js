@@ -12,7 +12,6 @@
  */
 angular.module( 'spiral9.directives.weatherCurrentlyPanel', [
     'ngTouch',
-    'spiral9.filters.makeSafeHTML',
     'spiral9.services.ForecastService'
 ] )
 
