@@ -13,23 +13,17 @@
 
 ## How To Build?
 
-### Prerequisites (and what versions are known to work): 
+### Prerequisites (and version(s) are known to work): 
 
 * Node v 5.6.0
-* Bower v 1.7.9
 
 ### From the command line from project dir :
 
 1. ``` $ npm install ```
-2. ``` $ bower install ```
-3. ``` $ gulp ```
-4. open the newly created 'build' directory and open index.html in your favorite browser
+2. ``` $ gulp ```
+3. open the newly created 'build' directory and open index.html in your favorite browser
 
 ## What are the project's known TODOs?
 
 1. unit tests - I haven't written any yet!!
-2. dynamic image service - it would be cool to load related background images by city and condition
-3. test-and-tweak for longer named cities
-4. test failure cases for city / state ( though 'monkey' and 'house' actually resolved to somewhere in the UK! )
-5. I used the dreaded TABLE element for grid layout - it would be good to use flexbox instead, but this implementation works down to an iPhone 4's screen size, so I went with it.
-6. On chrome on iOS the title bar of the browser doesn't disappear with scrolling as the scrolling is happening in the MAIN element as opposed to the body - it would be good to fix that (particularly in landscape!)
+2. On chrome on iOS the title bar of the browser doesn't disappear with scrolling as the scrolling is happening in the MAIN element as opposed to the body - it would be good to fix that (particularly in landscape!)

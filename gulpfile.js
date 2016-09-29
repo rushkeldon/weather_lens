@@ -22,7 +22,6 @@ var gulp = require( 'gulp' ),
 
 var paths = {
     build : 'build',
-    bowerJSON : './bower.json',
     lessMain : './src/less/main.less',
     buildCSS : './build/css'
 };
@@ -35,30 +34,15 @@ var filePatterns = {
     jsProd : [ 'src/**/*.js', '!src/**/*.spec.js' ],
     directiveTemplates : 'src/directives/**/*.tpl.html',
     lessForDirectives : 'src/directives/**/*.less',
-    fontFiles : [
-
-    ],
-    vendorCSSfiles : [
-
-    ],
-    // NOTE : most vendor files are linked to CDNs, but not those below.
-    vendorJSfiles : [
-        'vendor/lodash/dist/lodash.min.js',
-        'vendor/restangular/dist/restangular.min.js'
-    ]
+    /* the file arrays below are here in case there are files not via CDN, but local */
+    fontFiles : [],
+    vendorCSSfiles : [],
+    vendorJSfiles : []
 };
-
 
 // deletes the build directory
 gulp.task( 'clean', function deleteBuildDir() {
     del( [ paths.build + '/**/*' ] );
-} );
-
-// runs bower to install frontend dependencies
-gulp.task( 'installBower', function installBower() {
-    var install = require( 'gulp-install' );
-    return gulp.src( [ paths.bowerJSON ] )
-        .pipe( install() );
 } );
 
 // compiles less and creates inline css source map
@@ -148,7 +132,7 @@ gulp.task( 'copyVendorCSS', [], function copyVendorCSS() {
         .pipe( gulp.dest( './build/css' ) );
 } );
 
-// copy vendor js files
+// copy vendor js files to build directory (if any)
 gulp.task( 'copyVendorJS', [], function copyVendorJS() {
     return gulp.src( filePatterns.vendorJSfiles, { "base" : "." } )
         .pipe( flatten() )
