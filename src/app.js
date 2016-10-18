@@ -58,3 +58,6 @@ angular.module( 'spiral9.app.weatherLens', [
     } )
 
     .run( function(){ } );
+
+// hide address bar
+window.scrollTo(0,1);
